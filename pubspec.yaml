@@ -1,0 +1,95 @@
+name: protea_glen_gate
+description: Boom gate access management app for Protea Glen residents.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Navigation
+  go_router: ^13.2.0
+
+  # UI & theming
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  fl_chart: ^0.67.0
+  badges: ^3.1.2
+  animate_do: ^3.3.4
+
+  # QR code
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^5.1.0
+
+  # Networking
+  dio: ^5.4.3
+  connectivity_plus: ^6.0.3
+
+  # Storage & security
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.2.3
+  path_provider: ^2.1.3
+
+  # Auth & crypto
+  crypto: ^3.0.3
+  uuid: ^4.4.0
+  jwt_decoder: ^2.0.1
+
+  # Media
+  image_picker: ^1.1.1
+  video_player: ^2.8.6
+  chewie: ^1.8.1
+
+  # Utilities
+  intl: ^0.19.0
+  timeago: ^3.6.1
+  url_launcher: ^6.3.0
+  permission_handler: ^11.3.1
+  local_auth: ^2.1.8
+  flutter_local_notifications: ^17.2.2
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  # File handling
+  file_picker: ^8.0.3
+  open_file: ^3.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.9
+  riverpod_generator: ^2.4.0
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.3.10
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700

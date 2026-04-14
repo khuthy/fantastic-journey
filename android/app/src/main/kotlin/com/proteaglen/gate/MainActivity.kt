@@ -1,0 +1,5 @@
+package com.proteaglen.gate
+
+import io.flutter.embedding.android.FlutterFragmentActivity
+
+class MainActivity : FlutterFragmentActivity()
