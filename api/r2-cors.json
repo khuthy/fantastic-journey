@@ -1,0 +1,17 @@
+[
+  {
+    "AllowedOrigins": [
+      "https://app.proteaglen.com",
+      "https://staging.proteaglen.com"
+    ],
+    "AllowedMethods": ["PUT"],
+    "AllowedHeaders": ["Content-Type", "Content-Length"],
+    "MaxAgeSeconds": 3600
+  },
+  {
+    "AllowedOrigins": ["*"],
+    "AllowedMethods": ["GET", "HEAD"],
+    "AllowedHeaders": ["Range"],
+    "MaxAgeSeconds": 86400
+  }
+]

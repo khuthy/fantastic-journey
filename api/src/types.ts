@@ -17,6 +17,9 @@ export interface Env {
 
   // KV namespace
   RATE_LIMIT_KV: KVNamespace;
+
+  // R2 bucket binding (native — used for list / delete without HTTP overhead)
+  FOOTAGE_BUCKET: R2Bucket;
 }
 
 // ---------------------------------------------------------------------------

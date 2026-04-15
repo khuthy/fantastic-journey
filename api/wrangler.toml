@@ -22,6 +22,12 @@ CORS_ORIGIN  = "https://app.proteaglen.com"
 binding = "RATE_LIMIT_KV"
 id      = "REPLACE_WITH_YOUR_KV_ID"
 
+# ── R2 bucket — camera footage storage ──────────────────────────────────────
+# Create with: wrangler r2 bucket create protea-glen-footage
+[[r2_buckets]]
+binding     = "FOOTAGE_BUCKET"
+bucket_name = "protea-glen-footage"
+
 # ── Staging ─────────────────────────────────────────────────────────────────
 [env.staging]
 name = "protea-glen-api-staging"
@@ -34,6 +40,10 @@ CORS_ORIGIN  = "https://staging.proteaglen.com"
 binding = "RATE_LIMIT_KV"
 id      = "REPLACE_WITH_YOUR_STAGING_KV_ID"
 
+[[env.staging.r2_buckets]]
+binding     = "FOOTAGE_BUCKET"
+bucket_name = "protea-glen-footage-staging"
+
 # ── Dev (local wrangler dev) ─────────────────────────────────────────────────
 [env.dev]
 name = "protea-glen-api-dev"
@@ -41,3 +51,8 @@ name = "protea-glen-api-dev"
 [env.dev.vars]
 ENVIRONMENT = "development"
 CORS_ORIGIN  = "*"
+
+[[env.dev.r2_buckets]]
+binding             = "FOOTAGE_BUCKET"
+bucket_name         = "protea-glen-footage-dev"
+preview_bucket_name = "protea-glen-footage-dev"
