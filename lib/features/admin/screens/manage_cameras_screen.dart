@@ -33,7 +33,7 @@ class ManageCamerasScreen extends ConsumerWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.videocam_off_outlined,
+                  const Icon(Icons.videocam_off_outlined,
                       size: 64, color: AppColors.textHint),
                   const SizedBox(height: 16),
                   Text('No cameras configured',

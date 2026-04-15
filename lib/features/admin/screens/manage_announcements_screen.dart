@@ -36,7 +36,7 @@ class ManageAnnouncementsScreen extends ConsumerWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.campaign_outlined,
+                      const Icon(Icons.campaign_outlined,
                           size: 64, color: AppColors.textHint),
                       const SizedBox(height: 16),
                       Text('No announcements',

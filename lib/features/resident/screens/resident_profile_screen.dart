@@ -6,6 +6,7 @@ import '../../../core/utils/helpers.dart';
 import '../../../features/auth/providers/auth_provider.dart';
 import '../../../shared/widgets/app_button.dart';
 import '../../../shared/widgets/app_card.dart';
+import '../../auth/models/user_model.dart';
 
 class ResidentProfileScreen extends ConsumerWidget {
   const ResidentProfileScreen({super.key});

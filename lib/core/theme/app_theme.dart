@@ -194,7 +194,7 @@ abstract final class AppTheme {
         ),
       );
 
-  static CardTheme _cardTheme(Color color) => CardTheme(
+  static CardThemeData _cardTheme(Color color) => CardThemeData(
         color: color,
         elevation: AppDimensions.cardElevation,
         margin: EdgeInsets.zero,
@@ -327,7 +327,7 @@ abstract final class AppTheme {
         type: BottomNavigationBarType.fixed,
       );
 
-  static DialogTheme _dialogTheme(Color background) => DialogTheme(
+  static DialogThemeData _dialogTheme(Color background) => DialogThemeData(
         backgroundColor: background,
         elevation: 8,
         shape: RoundedRectangleBorder(

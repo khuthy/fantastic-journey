@@ -23,7 +23,7 @@ class AnnouncementsScreen extends ConsumerWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.campaign_outlined,
+                  const Icon(Icons.campaign_outlined,
                       size: 64, color: AppColors.textHint),
                   const SizedBox(height: 16),
                   Text(
@@ -119,8 +119,8 @@ class _AnnouncementCard extends StatelessWidget {
                 ),
               ),
               if (announcement.isPinned)
-                Padding(
-                  padding: const EdgeInsets.only(left: 8),
+                const Padding(
+                  padding: EdgeInsets.only(left: 8),
                   child: Icon(
                     Icons.push_pin_rounded,
                     size: 14,

@@ -3,7 +3,8 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
-
+// Import from neon_db_service.dart
+import 'neon_db_service.dart' show dioProvider;
 /// Cloudflare R2 client.
 ///
 /// R2 exposes an S3-compatible API. All requests use presigned URLs that are
@@ -206,5 +207,4 @@ final r2StorageServiceProvider = Provider<R2StorageService>((ref) {
   return R2StorageService(dio: dio);
 });
 
-// Import from neon_db_service.dart
-import 'neon_db_service.dart' show dioProvider;
+
