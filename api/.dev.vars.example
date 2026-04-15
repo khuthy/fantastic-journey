@@ -1,0 +1,9 @@
+# Copy to .dev.vars for local `wrangler dev` — never commit .dev.vars
+
+DATABASE_URL=postgres://user:password@ep-xxx.us-east-2.aws.neon.tech/neondb?sslmode=require
+JWT_SECRET=generate-32-byte-random-hex-here
+JWT_REFRESH_SECRET=generate-different-32-byte-random-hex-here
+R2_ACCESS_KEY_ID=your-r2-access-key-id
+R2_SECRET_ACCESS_KEY=your-r2-secret-access-key
+R2_BUCKET_NAME=protea-glen-footage
+R2_ACCOUNT_ID=your-cloudflare-account-id

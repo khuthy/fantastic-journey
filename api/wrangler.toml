@@ -1,0 +1,43 @@
+name = "protea-glen-api"
+main = "src/index.ts"
+compatibility_date = "2024-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ── Production ──────────────────────────────────────────────────────────────
+[vars]
+ENVIRONMENT = "production"
+CORS_ORIGIN  = "https://app.proteaglen.com"
+
+# Secrets (set via: wrangler secret put SECRET_NAME)
+# DATABASE_URL        — Neon connection string
+# JWT_SECRET          — 32-byte random hex string
+# JWT_REFRESH_SECRET  — 32-byte random hex string (different from above)
+# R2_ACCESS_KEY_ID    — Cloudflare R2 access key
+# R2_SECRET_ACCESS_KEY — Cloudflare R2 secret
+# R2_BUCKET_NAME      — e.g. protea-glen-footage
+# R2_ACCOUNT_ID       — Cloudflare account ID
+
+# ── KV namespace for rate-limiting ──────────────────────────────────────────
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id      = "REPLACE_WITH_YOUR_KV_ID"
+
+# ── Staging ─────────────────────────────────────────────────────────────────
+[env.staging]
+name = "protea-glen-api-staging"
+
+[env.staging.vars]
+ENVIRONMENT = "staging"
+CORS_ORIGIN  = "https://staging.proteaglen.com"
+
+[[env.staging.kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id      = "REPLACE_WITH_YOUR_STAGING_KV_ID"
+
+# ── Dev (local wrangler dev) ─────────────────────────────────────────────────
+[env.dev]
+name = "protea-glen-api-dev"
+
+[env.dev.vars]
+ENVIRONMENT = "development"
+CORS_ORIGIN  = "*"
